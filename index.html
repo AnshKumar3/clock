@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Osman Zakir" />
+  <meta name="description" content="This is my solution to the FreeCodeCamp project 
+  challenge to build a 25 + 5 Clock, in the Front End Libraries Projects section. 
+  It uses jQuery and SASS (SCSS syntax) along with HTML to create a Pomodoro timer." />
+  <title>Dragon 25 + 5 Clock Project</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif" />
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+  />
+</head>
+<body>
+  <main>
+    <h1>Dragon 25 + 5 Clock</h1>
+    <div id="break-label" class="break-label">
+      Break Length
+      <p id="break-length" class="break-length">5</p>
+      <button id="break-decrement" class="break-decrement"><i class="fas fa-minus"></i></button>
+      <button id="break-increment" class="break-increment"><i class="fas fa-plus"></i></button>
+    </div>
+    <div id="session-label" class="session-label">
+      Session Length
+      <p id="session-length" class="session-length">25</p>
+      <button id="session-decrement" class="session-decrement"><i class="fas fa-minus"></i></button>
+      <button id="session-increment" class="session-increment"><i class="fas fa-plus"></i></button>
+    </div>
+    <div id="timer" class="timer">
+      <!--"timer label" refers to whether it's a session or a break; will change 
+        using JavaScript as needed-->
+      <p id="timer-label" class="timer-label">Session</p>
+      <p id="time-left" class="time-left">25:00</p>
+    </div>
+    <div class="timer-controls">
+      <button id="start_stop" class="start_stop">
+        <i class="fas fa-play"></i>
+        <i class="fas fa-pause"></i>
+      </button>
+      <button id="reset" class="reset"><i class="fas fa-sync-alt"></i></button>
+    </div>
+    <audio src="335909__littlerainyseasons__time-s-up.wav" id="beep"></audio>
+  </main>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+  </script>
+  <script 
+    src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+    crossorigin="anonymous">
+  </script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

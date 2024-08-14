@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #708090;
+  color: #e7e9ec;
+
+  & main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & .fas {
+      color: #e7e9ec;
+    }
+
+    & .session-label {
+      float: right;
+      font-size: 24px;
+    
+      & .session-length {
+        font-size: 20px;
+      }
+    
+      &::after {
+        clear: both;
+      }
+    }
+
+    & .break-label {
+      float: left;
+      font-size: 24px;
+    
+      & .break-length {
+        font-size: 20px;
+      }
+    
+      &::after {
+        clear: both;
+      }
+    }
+
+    & .timer, .timer-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+    
+      & .timer-label {
+        font-size: 25px;
+      }
+    
+      & .time-left {
+        font-size: 30px;
+        font-weight: 200;
+      }
+    }
+    
+    & .timer {
+      margin-top: 100px
+    }
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@import "mobile";
